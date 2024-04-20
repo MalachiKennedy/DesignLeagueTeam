@@ -65,7 +65,98 @@ this.powerUp = () => {
 };
 }
 
+const promptUser = () => {
+  let name = prompt('Pick a name:') || 'Ninja';
+  let age;
+  let height; 
+  let color; 
 
+  this.getAge = () => {
+    age = prompt('Pick and age:') || '18';
+    age = parseInt(age);
+    if (isNaN(age)) {
+      this.getAge();
+    } else {
+        return;
+    }
+  };
+
+  this.getHeight = () => {
+    height = prompt('Pick height: 1, 2, 3, 4') || 4;
+    height = parseInt(height);
+    if (height === 1 || height === 2 || height === 3 || height ===4) {
+      height = height * 64;
+      return;
+    } else {
+      this.getHeight();
+    }
+  };
+
+  this.getColor = () => {
+    color = promt('Choose color: Reb Blue Gren') || 'red';
+    color = color.toLowerCase();
+    if (color === 'red' || color === 'blue' || color === 'green') {
+      return;
+    } else {
+      this.getColor();
+    }
+  };
+
+  this.appendImg = () => {
+    img= document.createElement('img');
+    let sive = 'width:' + height + 'px;height:' + height + 'px;';
+    if (color === 'blue') {
+      img.setAttribute('src', 'imgs/ninja1.png');
+      img.setAttribute('style', size);
+      conatiner.appendChild(img);
+    } else if (color === 'green') {
+      img.setAttribute('src', 'imgs/ninja2.png');
+      img.setAttribute('style', size);
+      conatiner.appendChild(img);
+    } else if (color === 'red') {
+      img.setAttribute('src', 'imgs/ninja3.png');
+      img.setAttribute('style', size);
+      conatiner.appendChild(img);
+    }
+  };
+
+  this.changeBtns = () => {
+    const btn = document.querySelector('button');
+    const btnConatiner = document.querySelector ('.btns-conatiner');
+    btnsContainer.removeChild(btn);
+    btnContainer.innerHTML = 
+      "<button onclick='ninja.coin()' id='btnCoin'>Coin</button> \n <button onclick='ninja.pipe()' id ='btnPipe'>Pipe</button> \n <button onclick='nina.powerUp()' id='btnPowerUp'>Power Up</button>";
+    const newBtns = document.querySelectorAll('button');
+    for (let i = 0; i < newBtns.length; i++) {
+      newBtns(i).style.setProperty('margin-left', '1.Sren')
+    }
+
+    // add floor 
+    const floor = document.createElement('div');
+    floor.setAttribute('class', 'floor');
+    conatiner.appendChild(floor);
+    floor.innerHTML = 
+      'Name: ' + 
+      ninja.name + 
+      '\xa0\xa0\xa0Age: ' + 
+      ninaja.age + 
+      '\xa0\xa0\xa0Height: ' + 
+      ninja.height + 
+      'px' + 
+      '\xa0\xa0\xa0Color: ' + 
+      ninja.color;
+  }; 
+
+  this.getAge();
+  this.getHeight();
+  this.getColor();
+
+  ninja = new Ninjas(name, age, height, color); 
+
+  this .appendImg();
+  this.changeBtns();
+  
+};
 
 
 
