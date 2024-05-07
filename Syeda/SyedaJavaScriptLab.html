@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> Syeda's JavaScript Basic </title>
+
+<style>
+body{
+background color: alice blue;
+}
+button {
+border-color: blue;
+}
+div{
+background-color:purple;
+ width: 100px;
+ height:100px;
+}
+
+#animate{
+backgreound-color: purple;
+width:50px;
+height:50px;
+position: absolute;
+}
+
+#container{
+background-color: pink;
+width: 300px;
+height: 300px;
+position: relative;
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>JavaScript Output Below</h1>
+<button type="button" onclick="helloWorld()">Greet</button>
+<button type="button" onclick="addition()">Add 6+5</button>
+<button type="button" onclick="subtract()">Subtract 6-5</button>
+<button type="button" onclick="multiply()">Multiply 90x5</button>
+<button type="button" onclick="division()">Divide 80^5</button>
+<button type="button" onclick="animate()"> Animate </button>
+
+<p id="demo"> Math output & coordinates output here</p>
+<div onmousemove="moveFunk(e)" onmouseout="clearCoor()"></div>
+<hr>
+<button type="button" onclick="moveIt()"> moveIt </button>
+
+<div id="container">
+
+<div id="animate">
+
+</div>
+
+</div>
+
+<script>
+function addition(){
+document.getElementById("demo").innerHTML=6+5
+}
+function subtract(){
+document.getElementById("demo").innerHTML=6-5
+}
+function multiply(){
+document.getElementById("demo").innerHTML=90*5
+}
+function division(){
+document.getElementById("demo").innerHTML=80/5
+}
+function helloWorld(){
+document.getElementById("demo").innerHTML="Hello World!"
+}
+function moveFunk(e){
+let x = e.clientX
+let y = e.clientY
+let coor = "Coordinates: ("+x+", "+y+")"
+document.getElementById("demo").innerHTML= coor
+}
+function clearCoor(){
+document.getElementById("demo").innerHTML="     "
+}
+
+
+function moveIt(){
+let id = null
+const elem=document.getElementById("animate");
+let pos=0
+clearInterval(id)
+id=setInterval(frame,5)
+function frame(){
+if (pos==350){
+clearInterval(id)
+}
+else{
+pos++
+elem.style.top = pos+"px"
+elem.style.left = pos+"px"
+}
+}
+}
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
