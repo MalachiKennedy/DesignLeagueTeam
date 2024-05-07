@@ -51,7 +51,7 @@ function Ninjas(name, age, height, color) {
                 coinImg.style.transform = 'translate(-50%,calc(-100% - ' + ninja.height + 'px)';
                 container.appendChild(coinImg);
 
-                $('#coin-img').animate({ top: '60%', opacity: 1 }, 250);
+                $('#coin-img').animate({ top: '60%', opacity: 1}, 250);
                 $('#coin-img').animate({ top: '70%', opacity: 0}, 250, () => {
                         $('coin-img').remove();
                         button.style.setProperty('background-color', 'transparent');
@@ -130,7 +130,7 @@ const promptUser = () => {
                         "<button onclick='ninja.coin()' id='btnCoin'>Coin</button> \n <button onclick='ninja.pipe()' id='btnPipe'>Pipe</button> \n <button onclick='ninja.powerUp()' id='btnPowerUp'>Power Up</button>";
                 const newBtns = document.querySelectorAll('button');
                 for (let i = 0; i < newBtns.length; i++) {
-                        newBtns [I].style.setProperty('margin-left', '1.5rem');
+                        newBtns [i].style.setProperty('margin-left', '1.5rem');
                 }
 
                 // Add floor
