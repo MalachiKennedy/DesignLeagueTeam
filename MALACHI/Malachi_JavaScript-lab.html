@@ -88,11 +88,11 @@
 	 function moveBack(){
 	    let id = null
 	    const elem=document.getElementById("animate");
-	    let pos=0
+	    let pos=250
 	    clearInterval(id)
 	    id=setInterval(frame,5)
 	    function frame(){
-	       if (pos==250){
+	       if (pos--250){
 		  clearInterval(id)
 	       }
 	       else{
