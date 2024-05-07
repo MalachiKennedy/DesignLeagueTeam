@@ -93,11 +93,11 @@
 	    clearInterval(id)
 	    id=setInterval(frame,5)
 	    function frame(){
-	       if (pos--250){
+	       if (pos==250){
 		  clearInterval(id)
 	       }
 	       else{
-		  pos++
+		  pos--
 		  elem.style.top = pos+"px"
 		  elem.style.left = pos+"px"
 	      }
