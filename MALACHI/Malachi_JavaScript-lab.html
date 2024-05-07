@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>Basic JavaScript</title>
+   <style>
+      div{
+	 background-color: red;
+	 width: 50px;
+	 height: 50px;
+      }
+      #animate{
+	 background-color: green;
+	 width: 50px;
+	 height: 50px;
+	 position: absolute;
+      }
+      #container{
+	 background-color: yellow;
+	 width: 300px;
+	 height: 300px;
+	 position: relative;
+      }
+   </style>
+   </head>
+
+   <body>
+      <h1>JavaScript Output below</h1>
+      <p id="demo">This will change with javascript.</p>
+      <button type="button" onclick="ClickMe()"> Add 5+3 </button>
+      <button type="button" onclick="Perry()"> Subtract 21-7 </button>
+      <button type="button" onclick="Kai()"> Multiply 6*8 </button>
+      <button type="button" onclick="Perry()"> Divide 32/4 </button>
+      <button type="button" onclick="Greet()"> Whats Up! </button>
+
+      <div style="background-color: red; width:100px; height:100px;" onmousemove="moveFunk(event)" onmouseout="clearCoor()"> </div>
+
+      <button type="button" onclick="moveIt()"> Move It </button>
+      <div id="container">
+         <div id="animate"></div>
+      </div>
+
+
+      <script>
+         function ClickMe(){
+	   document.getElementById("demo").innerHTML = 5+3
+	 }
+         function Perry(){
+	   document.getElementById("demo").innerHTML = 21-7
+         }
+         function Kai(){
+	   document.getElementById("demo").innerHTML = 6*8
+         }
+         function Hinata(){
+	   document.getElementById("demo").innerHTML = 32/4
+         }
+ 	 function Greet(){
+	   document.getElementById("demo").innerHTML = "Whats Up!"
+         }
+         function moveFunk(e){
+            let x = e.clientX
+            let y = e.clientY
+            let coor = "Coordinates: ("+x+", "+y+")"
+	    document.getElementById("demo").innerHTML = "coor"
+
+         }
+	 function clearCoor(){
+            document.getElementById("demo").innerHTML = "   "
+         }
+
+	 function moveIt(){
+	    let id = null
+	    const elem=document.getElementById("animate");
+	    let pos=0
+	    clearInterval(id)
+	    id=setInterval(frame,5)
+	    function frame(){
+	       if (pos==250){
+		  clearInterval(id)
+	       }
+	       else{
+		  pos++
+		  elem.style.top = pos+"px"
+		  elem.style.left = pos+"px"
+	      }
+	    }
+	 }
+	 function moveBack(){
+	    let id = null
+	    const elem=document.getElementById("animate");
+	    let pos=0
+	    clearInterval(id)
+	    id=setInterval(frame,5)
+	    function frame(){
+	       if (pos==250){
+		  clearInterval(id)
+	       }
+	       else{
+		  pos++
+		  elem.style.top = pos+"px"
+		  elem.style.left = pos+"px"
+	      }
+	    }
+	 }
+
+   </script>
+</body>
+</html>
