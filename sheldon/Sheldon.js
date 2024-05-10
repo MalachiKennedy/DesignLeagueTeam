@@ -111,4 +111,27 @@ this.getColor = () => {
       container.appendChild(img);
     } else if (color === 'green') {
       img.setAttribute('src', 'imgs/ninja2.png');
-      img.setAttribute(
+      img.setAttribute('style', size);
+      container.appendChild(img);
+    } else if (color === 'red') {
+      img.setAttribute('src', 'imgs/ninja3.png');
+      img.setAttribute('style', size);
+      container.appendChild(img);
+    }
+  };
+  this.changeBtns = () => {
+    const btn = document.querySelector('button');
+    const btnContainer = document.querySelector('.btns-container');
+    btnContainer.removeChild(btn);
+    btnContainer.innerHTML
+     "<button onclick='ninja.coin()' id='btnCoin'>Coin</button> \n button onclick='ninja.pipe()' id='btnPipe'>Pipe</button> \n <button onclick='ninja.powerUp()' id='btnPowerUp'>Power Up</button>";
+    const newBtns = document.querySelectorAll('button');
+    for (let 1 = 0; 1  < newBtns.length; 1++) {
+      newBtns[1].style.setProperty('margin-left', '1.5rem');
+    }
+
+    // Add floor
+    const floor = document.createElement('div');
+    floor.setAttribute('class', 'floor');
+    floor.setAttribute('class',
+                                          
