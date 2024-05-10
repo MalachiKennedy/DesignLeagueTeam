@@ -1,3 +1,29 @@
-body {
-  background-color: blue; 
+body{
+  background-color: lightblue;
+  font-family: 'Open Sans', sans-serif;
+}
+.banner{
+  background-color: black;
+  margin: 15px;
+  padding: 10px;
+  height: 200px;
+  border: 3px solid white;
+  border-radius: 15px;
+  outline-offset: 1px;
+  outline: grove 2px #162e64; 
+  color: whitesmoke;
+  text-transform: capitalize;
+  text-shadow: 2px 2px #4165b9;
+  font-family: fantasy;
+  font-style: oblique;
+  text-align: left;
+}
+
+#left{
+  border: 2px solid black;
+  position: absolute;
+  left: 1px;
+  margin: 5px;
+  padding: 5px;
+  width: 49.5%;
 }
