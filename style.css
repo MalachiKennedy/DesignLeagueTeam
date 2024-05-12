@@ -19,7 +19,7 @@ body{
   text-align: left;
 }
 
-#top{
+.top{
   border: 2px solid white;
   background-color: black;
   position: relative;
@@ -31,10 +31,12 @@ body{
   width: 99%;
 }
 
-#right{
+.right{
   border: 2px solid white;
   background-color: black;
   position: absolute;
+  vertical-align: right;
+  display: inline-block;
   right: 1px;
   margin: 5px;
   padding: 5px;
@@ -42,10 +44,25 @@ body{
   width: 49.5%;
 }
 
-#left{
+.left{
   border: 2px solid white;
   background-color: black;
   position: absolute;
+  vertical-align: left;
+  display: inline-block;
+  left: 1px;
+  margin: 5px;
+  padding: 5px;
+  height: 1200px;
+  width: 49.5%;
+}
+
+.bottom{
+  border: 2px solid white;
+  background-color: black;
+  position: absolute;
+  vertical-align: left;
+  display: inline-block;
   left: 1px;
   margin: 5px;
   padding: 5px;
