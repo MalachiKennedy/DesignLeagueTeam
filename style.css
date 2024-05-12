@@ -1,8 +1,10 @@
 body{
-  background-color: lightblue;
+  background-color: rgb(142, 210, 215);
   font-family: 'Open Sans', sans-serif;
 }
-
+p{
+  color: rgb(255, 255, 255)
+}
 .top{
   margin: 15px;
   padding: 10px;
@@ -11,9 +13,8 @@ body{
   border-radius: 15px;
   outline-offset: 1px;
   outline: grove 2px #162e64; 
-  color: rgb(65, 138, 103);
+  color: rgb(91, 183, 139);
   text-transform: capitalize;
-  text-shadow: 2px 2px #4165b9;
   font-family: fantasy;
   font-style: oblique;
   text-align: left;
