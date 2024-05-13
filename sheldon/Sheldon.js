@@ -133,5 +133,23 @@ this.getColor = () => {
     // Add floor
     const floor = document.createElement('div');
     floor.setAttribute('class', 'floor');
-    floor.setAttribute('class',
-                                          
+    container.appendChild(floor);
+    floor.innerHTML =
+      'Name: ' +
+      ninja.name +
+      '\xa2\xa8\xa0Height: ' +
+      ninja.height +
+      'px' +
+      '\xa2\xa8\xa0Color: ' +
+      ninja.color;
+  };
+
+  this.getAge();
+  this.getHeight();
+  this.getColor();
+
+  ninja = new Ninjas{name, age, height, color};
+
+  this.appendImg();
+  this.changeBtns();
+};
