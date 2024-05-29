@@ -1,31 +1,48 @@
 <!DOCTYPE html>
 <html>
 
-   <head>
-      <title>Basic JavaScript</title>
-   <style>
-      div{
-	 background-color: red;
-	 width: 50px;
-	 height: 50px;
-      }
+  <head>
+    <title>Basic JavaScript</title>
+   	<style>
       #animate{
-	 background-color: green;
-	 width: 50px;
-	 height: 50px;
-	 position: absolute;
+	 			background-color: red;
+	 			width: 50px;
+	 			height: 50px;
+	 			position: absolute;
       }
       #container{
-	 background-color: yellow;
-	 width: 300px;
-	 height: 300px;
-	 position: relative;
+	 			background-color: blue;
+				width: 300px;
+	 			height: 300px;
+	 			position: relative;
       }
       body{
-	 background-color: lightblue;
+	 			background-color: lightskyblue;
       }
+			h1{
+		 		color: white;
+		 		font-family: Copperplate;
+		 		font-size: 40px;
+		 		text-shadow: 4px 4px #2c98c2;
+		 }
+		 p{
+		 		color: #FFFFFF;
+		 		font-family: Copperplate;
+		 		font-size: 20px;
+		 		background-color: lightblue;
+		 		border: 2px solid;
+		 }
+
+		 button{
+		 		background-color: darkblue;
+		 		color: white;
+			 	border: 3px black;
+		 		border-color: white;
+		 		border-radius: 10px;
+		 		font-family: Monospace, Monaco;
+		 		font-size: 15px;
    </style>
-   </head>
+  </head>
 
    <body>
       <h1>JavaScript Output below</h1>
@@ -37,81 +54,82 @@
       <button type="button" onclick="Greet()"> Whats Up! </button>
 	   
       <p>Hover over the red box and see what happens!</p>
-      <div style="background-color: red; width:100px; height:100px;" onmousemove="moveFunk(event)" onmouseout="clearCoor()"> </div>
+		 	<p id=coord></p>
+      <div style="background-color: blue; width:100px; height:100px;" onmousemove="moveFunk(event)" onmouseout="clearCoor()"> </div>
       <div onmousemove="moveFunk(event)" onmouseout="clearCoor()"></div>
+			<br>
 
+			<p>Make the box move!</p>
       <button type="button" onclick="moveIt()"> Move It </button>
       <button type="button" onclick="moveBack()"> Move Back </button>
       <div id="container">
          <div id="animate"></div>
       </div>
 	   
-<p id=coord></p>
-<br>
+	
 
 
       <script>
          function ClickMe(){
-	   document.getElementById("demo").innerHTML = 5+3
-	 }
+	   				document.getElementById("demo").innerHTML = 5+3
+				 }
          function Perry(){
-	   document.getElementById("demo").innerHTML = 21-7
+	  				document.getElementById("demo").innerHTML = 21-7
          }
          function Kai(){
-	   document.getElementById("demo").innerHTML = 6*8
+	   				document.getElementById("demo").innerHTML = 6*8
          }
          function Hinata(){
-	   document.getElementById("demo").innerHTML = 32/4
+	   				document.getElementById("demo").innerHTML = 32/4
          }
- 	 function Greet(){
-	   document.getElementById("demo").innerHTML = "Whats Up!"
-         }
-         function moveFunk(e){
-            let x = e.clientX
-            let y = e.clientY
-            let coor = "Coordinates: ("+x+", "+y+")"
-	    document.getElementById("demo").innerHTML = "coor"
-
-         }
-	 function clearCoor(){
-            document.getElementById("demo").innerHTML = "   "
+ 	 			 function Greet(){
+	   				document.getElementById("demo").innerHTML = "Whats Up!"
          }
 
-	 function moveIt(){
-	    let id = null
-	    const elem=document.getElementById("animate");
-	    let pos=0
-	    clearInterval(id)
-	    id=setInterval(frame,5)
-	    function frame(){
-	       if (pos==250){
-		  clearInterval(id)
-	       }
-	       else{
-		  pos++
-		  elem.style.top = pos+"px"
-		  elem.style.left = pos+"px"
-	      }
-	    }
-	 }
-	 function moveBack(){
-	    let id = null
-	    const elem=document.getElementById("animate");
-	    let pos=250
-	    clearInterval(id)
-	    id=setInterval(frame,5)
-	    function frame(){
-	       if (pos==250){
-		  clearInterval(id)
-	       }
-	       else{
-		  pos--
-		  elem.style.top = pos+"px"
-		  elem.style.left = pos+"px"
-	      }
-	    }
-	 }
+				
+				function moveFunk(e){
+					let x = e.clientX
+					let y = e.clientY
+					let coor = "Coordinates: ("+x+","+y+")"
+					document.getElementById("coord").innerHTML = coor
+				}
+				function clearCoor(){
+            document.getElementById("coord").innerHTML = " "
+         }
 
+				
+				 function moveIt(){
+	    		let id = null
+	    		const elem=document.getElementById("animate");
+	    		let pos=0
+	    		clearInterval(id)
+	    		id=setInterval(frame,5)
+	    		function frame(){
+	       		if (pos==250){
+		  				clearInterval(id)
+	       		} else {
+		  					pos++
+		  					elem.style.top = pos+"px"
+		  					elem.style.left = pos+"px"
+	      			}
+	    		}
+				}
+	 			function moveBack(){
+	    		let id = null
+	    		const elem=document.getElementById("animate");
+	    		let pos=250
+	    		clearInterval(id)
+	    		id=setInterval(frame,5)
+	    		function frame(){
+	       		if (pos==0){
+		  				clearInterval(id)
+	       		} else {
+		  					pos--
+		  					elem.style.top = pos+"px"
+		 	 					elem.style.left = pos+"px"
+	      			}
+	    		}
+	 			}
    </script>
 </body>
 </html>
