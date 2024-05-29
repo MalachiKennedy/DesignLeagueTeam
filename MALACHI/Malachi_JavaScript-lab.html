@@ -32,14 +32,19 @@
       <button type="button" onclick="Kai()"> Multiply 6*8 </button>
       <button type="button" onclick="Perry()"> Divide 32/4 </button>
       <button type="button" onclick="Greet()"> Whats Up! </button>
-
+	   
+      <p>Hover over the red box and see what happens!</p>
       <div style="background-color: red; width:100px; height:100px;" onmousemove="moveFunk(event)" onmouseout="clearCoor()"> </div>
+      <div onmousemove="moveFunk(event)" onmouseout="clearCoor()"></div>
 
       <button type="button" onclick="moveIt()"> Move It </button>
       <button type="button" onclick="moveIBack)"> Move Back </button>
       <div id="container">
          <div id="animate"></div>
       </div>
+	   
+<p id=coord></p>
+<br>
 
 
       <script>
@@ -105,198 +110,5 @@
 	 }
 
    </script>
-</body>
-</html>
-
-
-<!DOCTYPE html>
-
-<html>
-
-<head>
-<title>basic JavaScript</title>
-
-<style>
-body{
-background-color: lightblue;
-}
-
-h1{
-color: white;
-font-family: Fantasy, Copperplate;
-font-size: 40px;
-text-shadow: 4px 4px #2c98c2;
-}
-
-p{
-color: #FFFFFF;
-font-family: Monospace, Lucida Console;
-font-size: 20px;
-background-color: #2c98c2;
-border: 2px solid;
-border-color: white;
-
-}
-
-button{
-background-color: darkblue;
-color: white;
-border: 2px dashed;
-border-color: white;
-border-radius: 10px;
-border-shadow: 5px 5px 5px darkblue;
-font-family: Monospace, Monaco;
-font-size: 15px;
-}
-
-#animate{
-background-color: green;
-width: 50px;
-height: 50px;
-position: absolute;
-border-radius: 60px;
-}
-
-#container{
-background-color: yellow;
-width: 300px;
-height: 300px;
-position: relative;
-border: 2px dotted #000000;
-border-radius: 25px;
-}
-
-#red{
-border: 2px dashed #000000;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<h1>JavaScript Output below</h1>
-<p id="demo">This will change with javascript</p>
-
-<button type="button" onclick="Reset()">
-Reset
-</button><br><br>
-
-<button type="button" onclick="ClickMe()">
-Add 5+3
-</button><br><br>
-
-<button type="button" onclick="ClickMe2()">
-Click Me Next!
-</button><br><br>
-
-<button type="button" onclick="ClickMe3()">
-Subtract 6-2 now!
-</button><br><br>
-
-<button type="button" onclick="ClickMe4()">
-Multiply 4*7
-</button><br><br>
-
-<button type="button" onclick="ClickMe5()">
-Divide 70/5
-</button><br><br>
-
-<p>Hover over the red box and see what happens!</p>
-<p id=coord></p>
-<br>
-
-<div id="red" style="background-color: red; width: 100px; height: 100px;" onmousemove="moveFunk(event)" onmouseout="clearCoor()></div>
-
-<div onmousemove="moveFunk(event)" onmouseout="clearCoor()"></div>
-
-<br><br>
-<p>Make the box move!</p>
-<button type="button" onclick="moveIt()">Animate</button>
-<button type="button" onclick="moveIt2()">Reverse</button>
-<br><br>
-<div id="container">
-
-<div id="animate"></div>
-
-</div>
-
-
-
-<script>
-
-function moveIt(){
-let id = null
-const elem = document.getElementById("animate")
-let pos = 0
-clearInterval(id)
-id = setInterval(frame,5)
-function frame(){
-if (pos == 250){
-clearInterval(id)
-}
-else{
-pos++
-elem.style.top = pos+"px"
-elem.style.left = pos+"px"
-}
-}
-}
-
-function moveIt2(){
-let id = null
-const elem = document.getElementById("animate")
-let pos = 250
-clearInterval(id)
-id = setInterval(frame,5)
-function frame(){
-if (pos == 0){
-clearInterval(id)
-}
-else{
-pos--
-elem.style.top = pos+"px"
-elem.style.left = pos+"px"
-}
-}
-}
-
-function moveFunk(e){
-let x = e.clientX
-let y = e.clientY
-let coor = "Coordinates: ("+x+","+y+")"
-document.getElementById("coord").innerHTML = coor
-}
-
-function clearCoor(){
-document.getElementById("coord").innerHTML = " "
-}
-
-function ClickMe(){
-document.getElementById("demo").innerHTML = 5+3
-}
-
-function ClickMe2(){
-document.getElementById("demo").innerHTML = "That's so cool! JavaScript can do math!"
-}
-
-function ClickMe3(){
-document.getElementById("demo").innerHTML = 6-2
-}
-
-function ClickMe4(){
-document.getElementById("demo").innerHTML = 4*7
-}
-
-function ClickMe5(){
-document.getElementById("demo").innerHTML = 70/5
-}
-
-function Reset(){
-document.getElementById("demo").innerHTML = "This will change with javascript"
-}
-</script>
-
 </body>
 </html>
