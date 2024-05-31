@@ -5,9 +5,12 @@
 }
 
 h1{
-  font-family: "merriweather", serif;
+  font-family: "Permanent Marker", cursive; 
 }
 
+
+/*Initialize
+=================== */
 *, ::before, ::after{
   margin: 0;
   padding: 0;
@@ -17,38 +20,37 @@ h1{
 :root{
   --accent-color: #34495e;
   --bg-color: #ecf0f1;
-  --main-font: 
+  --main-font: "Permanent Marker", cursive;
   --sub-font: "arial", sans-serif;
-  --g-ratio:1.618;
+  --g-ratio: 1.618;
 }
 
 body{
   font-family: var(--sub-font);
   font-weight: 300;
   background-color: var(--bg-color);
-  color:#111;
+  color: #111;
   font-size: 1.2em;
 }
 
-hr {
+hr{
   margin-top: 0.5em;
   width: 70px;
-  height:5px;
+  height: 5px;
   background-color: #34495e;
   border: none;
 }
 
-h1, h3, h3, .title {
+h1, h2, h3, .title{
   font-family: var(--main-font);
   font-weight: 900;
 }
-
-.title {
-  color: var(--accent-color);
+.title{
+  color: var(--acent-color);
 }
 
-.wrapper {
-  display: flex; 
+.wrapper{
+  display: flex;
   flex-direction: column;
   justify-content: center;
   width: calc(100vw / var(--g-ratio));
@@ -58,87 +60,80 @@ h1, h3, h3, .title {
   background-color: inherit;
 }
 
-/* Main Content 
-=================*/
+.container{
+  width: 100%;
+  height: 100%;
+  padding: 5rem 0;
+}
 
-.top-container {
+.lab-info h2, .lab-info h3{
+  font-weight: initial;
+}
+
+/*Main Content
+==================*/
+
+.top-container{
   display: flex;
-  width: 100%; 
+  width: 100%;
 }
 
-.lab-info {
-  iwdth: 50%;
+.lab-info{
+  width: 50%;
 }
 
-.content {
+.content{
   margin-top: 2rem;
   width: 100%;
   min-height: 500px;
-  postiton: relative;
-  border: 2px solid #ccc; 
+  position: relative;
+  border: 2px solid #ccc;
 }
 
-.btns-container {
+.btns-container{
   width: 50%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  position: relative; 
+  position: relative;
 }
 
-button {
-  background-color: transparent; 
-  border: 2px solid var(--acent-color);
+button{
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
   color: var(--accent-color);
-  font-size: 2rem; 
-  padding: 0.25em 1em; 
+  font-size: 2rem;
+  padding: 0.25em 1em;
 }
 
-#btnCoin, 
-#btnPipe, 
-#btnPowerUp {
-  transition: all ease 100ms; 
-  outline: none !important; 
+#btnCoin, #btnPipe, #btnPowerUp{
+  transition: all ease 100ms;
+  outline: none !important;
 }
 
-img {
+img{
   position: absolute;
   top: 70%;
-  left: 50%; 
+  left: 50%;
   transform: translate(-50%, -100%);
 }
 
-.floor {
-  width: 100%; 
-  height: 30%; 
-  position: absolute; 
-  bottom: 0; 
-  background-color: #bbb; 
-  z-index: 10; 
-  font-family: 'Press Start 2P', cursive;
-  display: flex; 
-  justify-content: center; 
+.floor{
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  bottom: 0;
+  background-color: #bbb;
+  z-index: 10;
+  fontifamily: 'Press Start 2P', cursive;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-#coin-img {
-  position: absolute; 
+#coin-img{
+  position: absolute;
   left: 50%;
   top: 70%;
-  height: 60px; 
+  height: 60px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-
